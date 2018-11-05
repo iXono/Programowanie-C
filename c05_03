@@ -1,4 +1,4 @@
-// Obliczanie n!
+// Najwięszka i najmniejsza liczba z pliku dane.txt
 
 #include <stdio.h>
 
