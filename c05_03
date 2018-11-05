@@ -1,0 +1,27 @@
+// Obliczanie n!
+
+#include <stdio.h>
+
+int main ()
+{
+   int x, min, max;
+   FILE *f=fopen("dane.txt","r");
+   
+   if (f!=NULL)
+   {
+       fscanf(f,"%d",&x);
+       min=x;
+       max=x;
+          do {
+          fscanf(f,"%d",&x);
+          if (x<min) min=x;
+          if (x>max) max=x;
+          }
+   while (!feof(f));
+   fclose(f);
+   printf ("Najmniejsza liczba to: %d ,a najwieksza to: %d \n",min,max);
+   
+   }   
+   else printf ("Nie otworzylem pliku");
+return 0;
+}
